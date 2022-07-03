@@ -14,3 +14,11 @@ Exemplo completo de login com Flutter usando API e PHP no Back-end.
 - Verificação token JWT;
 - Armazenamento de token;
 - Middleware para restrição de acesso;
+
+Obs: O layout simples, o foco foi para a estrutura, funcionalidade, requisiçõe API e restrição de acesso;
+<center>
+<img src='imagens/um.PNG'>
+<img src='imagens/dois.PNG'>
+<img src='imagens/quatro.PNG'>
+<img src='imagens/tres.PNG'>
+</center>
