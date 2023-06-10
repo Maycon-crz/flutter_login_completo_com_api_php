@@ -24,11 +24,10 @@ Exemplo completo de login com Flutter usando API e PHP no Back-end.
 <a href="https://www.youtube.com/watch?v=HzIXZVctwI8&t=1s&ab_channel=TekZoom">https://www.youtube.com/watch?v=HzIXZVctwI8&t=1s&ab_channel=TekZoom</a>
 
 --------
-
 Obs: O layout ficou simples porque o foco foi para a estrutura, funcionalidade, requisiçõe API e restrição de acesso;
-<center>
-<img src='imagens/um.PNG'>
-<img src='imagens/dois.PNG'>
-<img src='imagens/quatro.PNG'>
-<img src='imagens/tres.PNG'>
-</center>
+| Imagem 1                                               | Imagem 2                                                     |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Imagem 1](imagens/login_v2.PNG)                      | ![Imagem 2](imagens/login_validation_v2.PNG)                 |
+
+--------
+![Imagem 1](imagens/panel_v2.PNG)
