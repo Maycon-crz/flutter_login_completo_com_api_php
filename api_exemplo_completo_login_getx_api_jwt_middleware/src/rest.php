@@ -10,16 +10,7 @@
 			$qtdURIs = count($url);
 			/*Para pegar Class/Metodo*/
 			$pegarApartirDe = ($qtdURIs - 1);
-			$metodo = $url[$pegarApartirDe];
-			switch($metodo){
-				case 'login':
-					return $this->executarLogin();
-				break;
-				case 'user':
-					return $this->executarUser();
-				break;
-			}
-			return json_encode(array('data' => 'Erro01', 'status' => 'error'));
+			return $this->executarLogin();
 			
 		}
 		private function executarLogin(){
