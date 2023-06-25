@@ -5,6 +5,7 @@ import 'package:login_flutter/app/modules/utils/default_colors.dart';
 import 'package:login_flutter/app/modules/views/components/app_bar_component.dart';
 import 'package:login_flutter/app/modules/views/components/elevated_buttom_component.dart';
 import 'package:login_flutter/app/modules/views/components/text_form_field_component.dart';
+import 'package:login_flutter/app/routes/route_name.dart';
 
 class LoginPage extends GetView<LoginController> {
   const LoginPage({Key? key}) : super(key: key);
@@ -27,6 +28,8 @@ class LoginPage extends GetView<LoginController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const Icon(Icons.account_circle, size: 230),
+                const SizedBox(height: 30),
                 textFormFieldComponent(
                   context: context,
                   controller: controller.emailController.value,
@@ -52,7 +55,10 @@ class LoginPage extends GetView<LoginController> {
                 const SizedBox(height: 10),
                 elevatedButtomComponent(
                   title: "Cadastre-se",
-                  function: () {},
+                  function: () {
+                    // print("Boora");
+                    Get.offNamed(RouteName.userRegistration);
+                  },
                 ),
               ],
             ),
