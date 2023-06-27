@@ -4,4 +4,5 @@ class ApiPath {
   transferida para a sua pasta htdocs, após isso copie o endereço correto e cole aqui na constante base
   */
   static const base = "http://localhost/PARA_GITHUB/modelo_de_sistema_php/";
+  static const basePostsImage = "$base/theme/assets/img/posts";
 }
