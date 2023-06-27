@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:login_flutter/app/modules/controllers/generic_controller.dart';
 import 'package:login_flutter/app/modules/models/usersOptionsModel/dataTransferObjects/post_dto.dart';
 import 'package:login_flutter/app/modules/models/usersOptionsModel/post_model.dart';
+import 'package:login_flutter/app/routes/route_name.dart';
 
 class PanelController extends GenericController {
   final PostModel _postModel;
@@ -89,7 +90,13 @@ class PanelController extends GenericController {
   }
 
   Future<void> postDelete(PostDTO postDTO, BuildContext context) async {
+    isLoadingPostShowEdition.value = true;
     await _postModel.deletePostValidation(postDTO, context);
-    update();
+    //     .then((bool response) {
+    //   if (response) {
+    //     Get.offAllNamed(RouteName.panel);
+    //   }
+    // });
+    isLoadingPostShowEdition.value = false;
   }
 }

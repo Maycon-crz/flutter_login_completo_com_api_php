@@ -72,7 +72,8 @@ Widget postEditionComponent(PanelController controller, context) {
                           ),
                           SlidableAction(
                             onPressed: (context) {
-                              controller.postDelete(dataSearchPostsModel, context);
+                              controller.postDelete(
+                                  dataSearchPostsModel, context);
                             },
                             backgroundColor: Colors.red,
                             foregroundColor: Colors.white,
@@ -150,13 +151,16 @@ Dialog postEditingWindow(
               fontColor: standardColor,
             ),
             const SizedBox(height: 10),
-            SizedBox(
-              width: double.infinity * 0.4 < 500 ? double.infinity * 0.4 : 500,
-              height: 230,
-              child: cachedImage(
-                url:
-                    "${ApiPath.basePostsImage}/${dataSearchPostsModel.imageNamePost}",
-                boxFit: false,
+            Center(
+              child: SizedBox(
+                width:
+                    double.infinity * 0.4 < 500 ? double.infinity * 0.4 : 500,
+                height: 230,
+                child: cachedImage(
+                  url:
+                      "${ApiPath.basePostsImage}/${dataSearchPostsModel.imageNamePost}",
+                  boxFit: false,
+                ),
               ),
             ),
             const SizedBox(height: 10),
@@ -204,8 +208,7 @@ Dialog postEditingWindow(
                     : "Carregando...",
                 function: () {
                   if (formPostEditionKey.currentState!.validate() &&
-                      !controller
-                          .isLoadingPostRequestForEditionControl.value) {
+                      !controller.isLoadingPostRequestForEditionControl.value) {
                     controller.postEdition(
                       dataSearchPostsModel,
                       context,

@@ -14,52 +14,55 @@ Card postRegistrationComponent(
     elevation: 30,
     margin: const EdgeInsets.all(10),
     shadowColor: Colors.black,
-    child: Form(
-      key: controller.formKey,
-      child: Column(
-        children: [
-          const Text(
-            "Cadastrar postagem",
-            style: TextStyle(fontSize: 20),
-          ),
-          const SizedBox(height: 10),
-          textFormFieldComponent(
-            controller: controller.titlePostRegistrationController.value,
-            context: context,
-            label: "Título",
-            labelColor: Colors.black,
-            fontColor: Colors.black,
-          ),
-          const SizedBox(height: 10),
-          textFormFieldComponent(
-            controller: controller.descriptionPostRegistrationController.value,
-            context: context,
-            maxLines: 5,
-            label: "Descrição",
-            labelColor: Colors.black,
-            fontColor: Colors.black,
-          ),
-          const SizedBox(height: 10),
-          ImageCaptureComponent(
-            onImageSelected: (FilePickerCross? image) {
-              if (image != null) {
-                controller.imagePostRegistrationController = image;
-              }
-            },
-          ),
-          const SizedBox(height: 10),
-          elevatedButtomComponent(
-            title: !controller.isLoadingPostRegistration.value
-                ? "Cadastrar"
-                : "Carregando...",
-            function: () {
-              if (controller.formKey.currentState!.validate() &&
-                  !controller.isLoadingPostRegistration.value) {
-                controller.postRegistration();
-              }
-            },
-          ),
-        ],
+    child: Obx(
+      () => Form(
+        key: controller.formKey,
+        child: Column(
+          children: [
+            const Text(
+              "Cadastrar postagem",
+              style: TextStyle(fontSize: 20),
+            ),
+            const SizedBox(height: 10),
+            textFormFieldComponent(
+              controller: controller.titlePostRegistrationController.value,
+              context: context,
+              label: "Título",
+              labelColor: Colors.black,
+              fontColor: Colors.black,
+            ),
+            const SizedBox(height: 10),
+            textFormFieldComponent(
+              controller:
+                  controller.descriptionPostRegistrationController.value,
+              context: context,
+              maxLines: 5,
+              label: "Descrição",
+              labelColor: Colors.black,
+              fontColor: Colors.black,
+            ),
+            const SizedBox(height: 10),
+            ImageCaptureComponent(
+              onImageSelected: (FilePickerCross? image) {
+                if (image != null) {
+                  controller.imagePostRegistrationController = image;
+                }
+              },
+            ),
+            const SizedBox(height: 10),
+            elevatedButtomComponent(
+              title: !controller.isLoadingPostRegistration.value
+                  ? "Cadastrar"
+                  : "Carregando...",
+              function: () {
+                if (controller.formKey.currentState!.validate() &&
+                    !controller.isLoadingPostRegistration.value) {
+                  controller.postRegistration();
+                }
+              },
+            ),
+          ],
+        ),
       ),
     ),
   );

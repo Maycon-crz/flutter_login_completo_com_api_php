@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:login_flutter/app/modules/models/sharedDTO/generic_response_dto.dart';
 import 'package:login_flutter/app/modules/models/usersOptionsModel/dataTransferObjects/post_dto.dart';
 import 'package:login_flutter/app/modules/repository/usersOptionsRepository/post_repository.dart';
 import 'package:login_flutter/app/modules/utils/default_colors.dart';
 import 'package:login_flutter/app/modules/views/components/confirmation_window_component.dart';
 import 'package:login_flutter/app/modules/views/components/show_snackbar_component.dart';
+import 'package:login_flutter/app/routes/route_name.dart';
 
 class PostModel {
   final PostRepository _postRepository;
@@ -98,17 +100,17 @@ class PostModel {
 
   /*-------------------------------------*/
   /*---------Excluir postagens-----------*/
-  Future<bool> deletePostValidation(
-      PostDTO postDTO, BuildContext context) async {
+  Future<void> deletePostValidation(
+    PostDTO postDTO,
+    BuildContext context,
+  ) async {
     ConfirmationWindowComponent.showConfirmationDialog(
       context: context,
       title: "Atenção!",
-      content: const Text(
-        "Tem certeza que deseja excluir a postagem?",
-      ),
+      content: const Text("Tem certeza que deseja excluir a postagem?"),
       function: (value) async {
         if (value) {
-          return await _postRepository
+          await _postRepository
               .deletePostRepo(postDTO)
               .then((GenericResponseDTO? response) {
             if (response != null) {
@@ -121,8 +123,7 @@ class PostModel {
                     : Colors.green,
               );
               if (response.status == "success") {
-                getPostsForEdition("");
-                return true;
+                Get.offAllNamed(RouteName.panel);
               }
             } else {
               SnackbarComponent.showSnackbarComponent(
@@ -132,13 +133,9 @@ class PostModel {
                 cor: Colors.redAccent,
               );
             }
-            return false;
           });
-        } else {
-          return false;
         }
       },
     );
-    return false;
   }
 }
