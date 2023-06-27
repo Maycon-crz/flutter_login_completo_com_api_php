@@ -1,13 +1,13 @@
-class GenericResponseDTO {
+class GenericResponse {
   String? data;
   String? status;
 
-  GenericResponseDTO({
+  GenericResponse({
     this.data,
     this.status,
   });
 
-  GenericResponseDTO.fromJson(Map<String, dynamic> json) {
+  GenericResponse.fromJson(Map<String, dynamic> json) {
     data = json['data'];
     status = json['status'];
   }

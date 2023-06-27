@@ -45,12 +45,9 @@ class LoginPage extends GetView<LoginController> {
                 ),
                 const SizedBox(height: 30),
                 elevatedButtomComponent(
-                  title: !controller.isLoadingLogin.value
-                      ? "Entrar"
-                      : "Carregando...",
+                  title: "Entrar",
                   function: () {
-                    if (formKey.currentState!.validate() &&
-                        !controller.isLoadingLogin.value) {
+                    if (formKey.currentState!.validate()) {
                       controller.login();
                     }
                   },
@@ -59,7 +56,8 @@ class LoginPage extends GetView<LoginController> {
                 elevatedButtomComponent(
                   title: "Cadastre-se",
                   function: () {
-                    Get.toNamed(RouteName.userRegistration);
+                    // print("Boora");
+                    Get.offNamed(RouteName.userRegistration);
                   },
                 ),
               ],
