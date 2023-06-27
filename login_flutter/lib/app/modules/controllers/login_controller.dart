@@ -6,6 +6,7 @@ import 'package:login_flutter/app/modules/repository/authenticationRepository/lo
 import 'package:login_flutter/app/routes/route_name.dart';
 
 class LoginController extends GetxController with StateMixin {
+  Rx<bool> isLoadingLogin = false.obs;
   final LoginRepository _loginRepository;
   final LoginModel _loginModel;
   LoginDTO dataLogin = LoginDTO();
@@ -14,6 +15,7 @@ class LoginController extends GetxController with StateMixin {
   Rx<TextEditingController> passwordController = TextEditingController().obs;
 
   Future<void> login() async {
+    isLoadingLogin.value = true;
     dataLogin = LoginDTO(
       email: emailController.value.text,
       pass: passwordController.value.text,
@@ -28,5 +30,6 @@ class LoginController extends GetxController with StateMixin {
         Get.offNamed(RouteName.panel);
       }
     });
+    isLoadingLogin.value = false;
   }
 }

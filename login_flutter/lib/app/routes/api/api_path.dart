@@ -1,7 +1,9 @@
 class ApiPath {
   /*
-  Para funcionar corretamente a pasta ( api_exemplo_completo_login_getx_api_jwt_middleware ) deve ser 
-  transferida para a sua pasta htdocs, após isso copie o endereço correto e cole aqui na constante base
+  Para funcionar corretamente o sistema desktop precisa ser clonado na sua pasta htdocs do seu 
+  servidor local PHP! após isso abra no navegador e copie o link e cole aqui na const base.
   */
-  static const base = "http://localhost/PARA_GITHUB/modelo_de_sistema_php/";
+  static const base =
+      "http://localhost/HOMOLOGACAO_WEB/modelo_de_sistema_php_com_api/";
+  static const basePostsImage = "$base/theme/assets/img/posts";
 }

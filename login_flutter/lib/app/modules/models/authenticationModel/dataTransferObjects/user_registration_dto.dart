@@ -4,7 +4,7 @@ class UserRegistrationDTO {
   String? emailConf;
   String? password;
   String? passwordConf;
-  String? terms;
+  bool? terms;
 
   UserRegistrationDTO({
     this.fullName,
