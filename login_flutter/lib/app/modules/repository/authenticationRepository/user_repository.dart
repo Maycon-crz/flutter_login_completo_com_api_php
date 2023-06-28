@@ -12,7 +12,7 @@ class UserRepository extends Auth {
   Future<GenericResponseDTO?> registrationRequest({
     required UserRegistrationDTO userRegistrationDTO,
   }) async {
-    String url = "${ApiPath.base}api/registration_user";
+    String url = "${ApiPath.base}api/user_registration";
     final form = FormData({
       'full_name': userRegistrationDTO.fullName,
       'email': userRegistrationDTO.email,
@@ -28,6 +28,7 @@ class UserRepository extends Auth {
       form,
       headers: {'Charset': 'utf-8'},
     );
+    print(response);
     print(response.body);
     if (response.isOk && response.statusCode == 200) {
       Map<String, dynamic> map = response.body;

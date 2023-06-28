@@ -17,7 +17,7 @@ class PostRepository extends Auth {
   PostRepository(this._restClient);
 
   Future<GenericResponseDTO?> registrationPostsRepo({PostDTO? postDTO}) async {
-    String url = '${ApiPath.base}/api/post/post_registration';
+    String url = '${ApiPath.base}api/post/post_registration';
     final form = http.MultipartRequest('POST', Uri.parse(url));
     final box = GetStorage();
     String email = "";
@@ -57,7 +57,7 @@ class PostRepository extends Auth {
   }
 
   Future<List<PostDTO>?> getPosts(String title) async {
-    String url = '${ApiPath.base}/api/post/get_posts';
+    String url = '${ApiPath.base}api/post/get_posts';
     final form = FormData({
       "front_end": "external",
       "app_key": super.getAppKey,
@@ -81,7 +81,7 @@ class PostRepository extends Auth {
   }
 
   Future<GenericResponseDTO?> editPostRepo(PostDTO postDTO) async {
-    String url = '${ApiPath.base}/api/post/post_edition';
+    String url = '${ApiPath.base}api/post/post_edition';
     final form = http.MultipartRequest('POST', Uri.parse(url));
     final box = GetStorage();
     String email = "";
@@ -114,6 +114,8 @@ class PostRepository extends Auth {
     form.headers['Authorization'] = super.getToken;
     final streamedResponse = await form.send();
     final response = await http.Response.fromStream(streamedResponse);
+    print("Boora");
+    print(response.body);
     if (response.statusCode == 200) {
       Map<String, dynamic> map = json.decode(response.body);
       return GenericResponseDTO(data: map["data"], status: map["status"]);
@@ -123,7 +125,7 @@ class PostRepository extends Auth {
   }
 
   Future<GenericResponseDTO?> deletePostRepo(PostDTO postDTO) async {
-    String url = '${ApiPath.base}/api/post/post_delete';
+    String url = '${ApiPath.base}api/post/post_delete';
     final box = GetStorage();
     String email = "";
     email = (box.read('email') ?? "") as String;
