@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:login_flutter/app/modules/controllers/generic_controller.dart';
 import 'package:login_flutter/app/modules/models/usersOptionsModel/dataTransferObjects/post_dto.dart';
 import 'package:login_flutter/app/modules/models/usersOptionsModel/post_model.dart';
-import 'package:login_flutter/app/routes/route_name.dart';
 
 class PanelController extends GenericController {
   final PostModel _postModel;

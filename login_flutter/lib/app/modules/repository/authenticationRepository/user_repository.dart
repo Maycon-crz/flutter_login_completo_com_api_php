@@ -28,8 +28,6 @@ class UserRepository extends Auth {
       form,
       headers: {'Charset': 'utf-8'},
     );
-    print(response);
-    print(response.body);
     if (response.isOk && response.statusCode == 200) {
       Map<String, dynamic> map = response.body;
       if (map["data"].runtimeType == String) {

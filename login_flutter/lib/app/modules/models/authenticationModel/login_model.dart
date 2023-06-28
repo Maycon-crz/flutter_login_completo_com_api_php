@@ -1,4 +1,3 @@
-import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:login_flutter/app/modules/models/authenticationModel/dataTransferObjects/login_dto.dart';
 import 'package:login_flutter/app/modules/repository/authenticationRepository/login_repository.dart';

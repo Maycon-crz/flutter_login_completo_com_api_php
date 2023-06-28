@@ -68,7 +68,6 @@ class PostRepository extends Auth {
       "Charset": "utf-8",
       "Authorization": super.getToken,
     });
-    print(response.body);
     if (response.isOk && response.statusCode == 200) {
       Map<String, dynamic> map = response.body;
       return map["data"]
@@ -114,8 +113,6 @@ class PostRepository extends Auth {
     form.headers['Authorization'] = super.getToken;
     final streamedResponse = await form.send();
     final response = await http.Response.fromStream(streamedResponse);
-    print("Boora");
-    print(response.body);
     if (response.statusCode == 200) {
       Map<String, dynamic> map = json.decode(response.body);
       return GenericResponseDTO(data: map["data"], status: map["status"]);
