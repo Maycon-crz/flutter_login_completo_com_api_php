@@ -32,6 +32,30 @@ Este modelo contém a base de login, cadastro de usuários e CRUD de postagens c
 | Imagem 1                                               | Imagem 2                                                     |
 | ------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Imagem 1](imagens/login_v2.PNG)                      | ![Imagem 2](imagens/login_validation_v2.PNG)                 |
-
 --------
-![Imagem 1](imagens/panel_v2.PNG)
+| Cadastro de postagem                                   | Edição de postagem                                           |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+|![Imagem 1](imagens/cadastro_de_postagens.PNG)          | ![Imagem 2](imagens/edicao_de_postagem_parte_1.PNG)          |
+--------
+| Edição de postagem                                     | Edição de postagem                                           |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+|![Imagem 1](imagens/edicao_de_postagem_parte_2.PNG)     | ![Imagem 2](imagens/edicao_de_postagem_parte_3.PNG)          |
+--------
+| Exclusão de postagem                                   | Exclusão de postagem                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+|![Imagem 1](imagens/exclusao_de_postagem_parte_1.PNG)   | ![Imagem 2](imagens/exclusao_de_postagem_parte_2.PNG)        |
+--------
+
+### Dicas de Extensões para VS Code
+- <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code">Dart</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=dotup.dart-data-class-generator">Dart Data Class Generator</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils">Flutter & Dart Utilities</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=aksharpatel47.vscode-flutter-helper">Flutter Helpers</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=Flutterando.flutter-mobx">flutter_mobx</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=FlutterBricksProductions.flutterbricks">FlutterBricks</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets">GetX Snippets</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=funkyremi.vscode-google-translate">Vscode Google Translate</a>
+- <a href="https://marketplace.visualstudio.com/items?itemName=Codeium.codeium">Codeium: AI Coding Autocomplete</a>
+
