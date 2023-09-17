@@ -26,7 +26,8 @@ Este modelo contém a base de login, cadastro de usuários e CRUD de postagens c
 - 2º) Copie o link do repositório no gitHub, va até a pasta que deseja clonar o projeto, apague o endereço da pasta e digite cmd, vai abrir o prompt de comando, com o caminho da pasta, em seguida digite: git clone (da um espaço) e cole o link do repositório;
 - 3º) Abra a pasta (login_flutter) no VS Code em seguida abra o terminal e digite o comando: (flutter clean) deipois (flutter analyze) caso ainda ocorram erros verifique as versões do dart, flutter e dos pacotes.
 - 4º) Para iniciar o sistema clique em Run and Debug ou digite: (flutter run -d);
-- 5º) Caso queira rodar o sistema diretamente no windows é necessário fazer algumas configurações este <a href="https://www.youtube.com/watch?v=kkH-LtjPbyU&list=PLzc1k4Riyr4Jv1YxbNadQ0Gua2-dCqD8Q&index=1">vídeo</a> mostra como fazer no android estudio mas após configurado é possível usar o VS Code;
+- 5º) Caso queira rodar o sistema diretamente no windows é necessário fazer algumas configurações aqui está a <a href="[https://www.youtube.com/watch?v=kkH-LtjPbyU&list=PLzc1k4Riyr4Jv1YxbNadQ0Gua2-dCqD8Q&index=1](https://docs.flutter.dev/platform-integration/desktop)">documentação</a> que mostra como fazer;
+- 6º) No terminal digite (flutter doctor -v) vai aparecer os requisitos que faltam, instale o Android Studio e Visual Studio clicando nos links mostrados no terminal (selecione também na hora de instalar o Visual Studio essas opções: desenvolvimento para Desktop e Mobile. OBS: vai ser necessário ter um bom espaço de armazento para conseguir instalar tudo o que é necessário).
 
 ### Imagens do modelo
 | Imagem 1                                               | Imagem 2                                                     |
